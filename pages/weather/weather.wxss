@@ -1,0 +1,15 @@
+.weather{
+  display: flex;
+  flex-direction: row;
+  
+}
+.title{
+  display: flex;
+  flex-direction: row;
+}
+.textC{
+  margin-left: 90rpx
+}
+.textD{
+  margin-left: 20rpx
+}

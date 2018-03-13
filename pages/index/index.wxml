@@ -1,0 +1,149 @@
+<view class="section">
+  <view class="section__title">省市区选择器</view>
+  <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+    <view class="picker">
+      当前选择：{{region[0]}}，{{region[1]}}，{{region[2]}}
+    </view>
+  </picker>
+</view>
+<view class="section">
+  <view class="section__title">日期选择器</view>
+  <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+    <view class="picker">
+      当前选择: {{date}}
+    </view>
+  </picker>
+</view>
+<view class="section">
+  <view class="section__title">时间选择器</view>
+  <picker mode="time" value="{{time}}" start="09:01" end="21:01" bindchange="bindTimeChange">
+    <view class="picker">
+      当前选择: {{time}}
+    </view>
+  </picker>
+</view>
+<view class="section">
+  <view class="section__title">普通选择器</view>
+  <picker bindchange="bindPickerChange" value="{{index==null?0:index}}" range-key='name' range="{{countryArray}}">
+    <view class="picker">
+      当前选择：{{countryArray[index].name==null?countryArray[0].name:countryArray[index].name}}
+    </view>
+  </picker>
+</view>
+<checkbox-group bindchange="checkboxChange">
+  <label class="checkbox" wx:for="{{items}}">
+    <checkbox value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+  </label>
+</checkbox-group>
+<progress percent="20" show-info activeColor="pink"/>
+<progress percent="40" stroke-width="12" />
+<progress percent="60" color="pink" />
+<progress percent="{{percent}}" show-info active active-mode='forwards'/>
+<button  size='default' type='primary'
+open-type="share" lang=''
+bindgetuserinfo='getUserInfo'
+>下载</button>
+<view class="btn-area">
+  <view class="body-view">
+    <text selectable space='ebsp'>{{text}}</text>
+    <button bindtap="add">add line</button>
+    <button bindtap="remove">remove line</button>
+  </view>
+</view>
+<view class="group">
+  <block wx:for="{{iconSize}}">
+    <icon type="success" size="{{item}}"/>
+  </block>
+</view>
+<view class="group">
+  <block wx:for="{{iconType}}">
+    <icon type="{{item}}" size="40"/>
+  </block>
+</view>
+<view class="group">
+  <block wx:for="{{iconColor}}">
+    <icon type="success" size="40" color="{{item}}"/>
+  </block>
+</view>
+<view class="section">
+  <view class="section__title">vertical scroll</view>
+  <scroll-view scroll-y style="height: 200px;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+    <view id="green" class="scroll-view-item bc_green"></view>
+    <view id="red"  class="scroll-view-item bc_red"></view>
+    <view id="yellow" class="scroll-view-item bc_yellow"></view>
+    <view id="blue" class="scroll-view-item bc_blue"></view>
+  </scroll-view>
+
+  <view class="btn-area">
+    <button size="mini" bindtap="tap">click me to scroll into view </button>
+    <button size="mini" bindtap="tapMove">click me to scroll</button>
+  </view>
+</view>
+<view class="section section_gap">
+  <view class="section__title">horizontal scroll</view>
+  <scroll-view class="scroll-view_H" scroll-x style="width: 100%">
+    <view id="green" class="scroll-view-item_H bc_green"></view>
+    <view id="red"  class="scroll-view-item_H bc_red"></view>
+    <view id="yellow" class="scroll-view-item_H bc_yellow"></view>
+    <view id="blue" class="scroll-view-item_H bc_blue"></view>
+  </scroll-view>
+</view>
+<view class='section'>
+  <view class='section_title'>flex-direction:row</view>
+  <view class='flex-wrp'>
+    <view class='flex-item bc_green' hover-start-time="60" hover-class='green_to_red'>1</view>
+    <view class='flex-item bc_red'>2</view>
+    <view class='flex-item bc_blue'>3</view>
+  </view>
+</view>
+
+<wxs src="../comm.wxs" module="comm"/>
+<view>{{comm.foo}}</view>
+<view>{{comm.bar('参数')}}</view>
+<view>{{comm.msg}}</view>
+<view>{{10||20}}</view>
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+</view>
+<view id="tapTest2" data-hi='WeChat' bindtap='tapName'>Click measdfasf!
+<view id="tapTest" data-hi='WeChat' bindtap='tapName'>Click me!</view>
+</view>
+<view>{{message}}</view>
+<view wx:if="{{condition}}">
+  show me you code
+
+  <checkbox checked='{{true}}'></checkbox>  
+</view>
+<view>{{"hello" + message}}</view>
+<view>{{object.key}} {{array[0]}}</view>
+<view wx:for="{{[zero, 1, 2, 3, 4]}}"> {{item}} </view>
+<view wx:if="{{b>2}}">大于2</view>
+<view wx:elif="{{b<2}}">小于2</view>
+<view wx:else>等于2</view>
+<block wx:if="{{true}}">
+  <view> view1 </view>
+  <view> view2 </view>
+</block>
+<template name="objectCombine">
+<view>
+<text>{{for}}:{{bar}}</text>
+</view>
+</template>
+<template is="objectCombine" data="{{for: a, bar: b}}"></template>
+<view hidden="{{condition ? true : false}}"> Hidden </view>
+<switch wx:for="{{objectArray}}" wx:key="unique" style="display: block;"> {{item.id}} </switch>
+<button bindtap="switch"> Switch </button>
+<button bindtap="addToFront"> Add to the front </button>
+
+<switch wx:for="{{numberArray}}" wx:key="*this" style="display: block;"> {{item}} </switch>
+<button bindtap="addNumberToFront"> Add to the front </button>

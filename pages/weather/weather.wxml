@@ -1,0 +1,20 @@
+<view class='title'>
+  <text class="textC">日期</text> 
+  <text class="textC">温度</text> 
+  <text class="textC">天气</text> 
+  <text class="textC">风力</text> 
+</view>
+<view class="weather" wx:for="{{weatherData}}" wx:for-item="weather"> 
+  <text class="textD">
+  {{index}}:{{weather.date}}</text>
+  <text class="textD">
+  {{weather.temperature}}</text>
+  <text class="textD">
+  {{weather.weather}}</text>
+  <text class="textD">
+  {{weather.wind}}</text>
+</view>
+<block wx:for="{{[1, 2, 3]}}">
+  <view> {{index}}: </view>
+  <view> {{item}} </view>
+</block>

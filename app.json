@@ -1,0 +1,40 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/amap/amap",
+    "pages/weather/weather",
+    "pages/sample/sample",
+    "pages/redirect/redirect",
+    "pages/navigator/navigator"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "日志"
+      },
+     {
+      "pagePath": "pages/amap/amap",
+      "text": "高德"
+    },
+      {
+        "pagePath": "pages/weather/weather",
+        "text": "天气"
+      },{
+        "pagePath": "pages/sample/sample",
+        "text": "导航"
+      }
+    ]
+  }
+}
