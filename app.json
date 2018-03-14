@@ -6,7 +6,9 @@
     "pages/weather/weather",
     "pages/sample/sample",
     "pages/redirect/redirect",
-    "pages/navigator/navigator"
+    "pages/navigator/navigator",
+    "pages/regeo/regeo",
+    "pages/staticmap/staticmap"
   ],
   "window":{
     "backgroundTextStyle":"light",

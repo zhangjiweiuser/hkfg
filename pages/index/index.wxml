@@ -1,3 +1,10 @@
+<view class="containermap">
+  <view class="naviButton" id="Regeo" bindtouchstart='naviToRegeo'>地址解析</view>
+</view>
+<view class="containermap">
+  <view class="naviButton" id="staticmap" bindtouchstart='naviTostaticmap'>静态地图</view>
+</view>
+<button bindtap='getLocationm'>获取经纬度</button>
 <view class="section">
   <view class="section__title">省市区选择器</view>
   <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">

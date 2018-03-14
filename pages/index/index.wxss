@@ -53,3 +53,9 @@
 .green_to_red{
   background-color: red;
 }
+.naviButton{
+  border: 1px solid #000;
+  margin: 26px;
+  padding: 6px 0;
+  text-align: center;
+}

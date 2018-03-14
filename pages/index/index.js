@@ -84,6 +84,24 @@ Page({
     region: ['广东省', '广州市', '海珠区'],
     customItem: '全部'
   },
+  getLocationm:function(e){
+    wx.getLocation({
+      type:'gcj02',
+      success: function(res) {
+        console.log(res)
+      },
+    })
+  },
+  naviToRegeo:function(e){
+    wx.navigateTo({
+      url: '../regeo/regeo',
+    })
+  },
+  naviTostaticmap:function(e){
+    wx.navigateTo({
+      url: '../staticmap/staticmap',
+    })
+  },
   bindRegionChange: function (e) {
     console.log('picker发送选择改变，携带值为', e.detail.value)
     this.setData({
