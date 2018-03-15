@@ -1,0 +1,6 @@
+<!--pages/inputtips/inputtips.wxml-->
+<view class='selection'>
+  <input bindinput='bindInput' placeholder='搜索' focus='true'></input>
+</view>
+<view bindtouchstart='bindSearch' data-keywords='{{i.name}}' wx:for='{{tips}}' wx:for-item="i" class='text_box'>
+{{i.name}}</view>

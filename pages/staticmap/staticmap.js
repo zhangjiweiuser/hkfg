@@ -3,8 +3,8 @@ Page({
     markers: [{
       iconPath: "../../images/marker.png",
       id: 0,
-      latitude: 23.099994,
-      longitude: 113.324520,
+      latitude: 39.975266,
+      longitude: 116.494064,
       title:'hello every one',
       width: 22,
       height: 32,
@@ -64,8 +64,30 @@ Page({
       clickable: true
     }]
   },
+  onLoad:function(e){
+    var that = this;
+    wx.getLocation({
+      type:'gcj02',
+      success: function(res) {
+        console.log(res)
+        var latitude = res.latitude;
+        var longitude = res.longitude;
+        console.log(latitude,longitude)
+        console.log(that.data.markers[0].label)
+        var marker = that.data.markers;
+        var label = marker[0].label;
+        label.content = latitude + ',' + longitude;
+        that.setData({
+          latitude:latitude,
+          longitude: longitude,
+          markers:marker
+        })
+      },
+    })
+  },
   regionchange:function(e) {
     console.log(e.type)
+    console.log(this.data.markers)
   },
   markertap: function(e) {
     console.log(e.markerId)

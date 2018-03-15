@@ -1,0 +1,7 @@
+/* pages/navigation_car_detail/navigation_car_detail.wxss */
+.text_box{
+  margin: 0 15px;
+  padding: 15px 0;
+  border-bottom: 1px solid #c3c3c3;
+  font-size: 13px;
+}

@@ -1,0 +1,18 @@
+<!--pages/poi/poi.wxml-->
+<view class="selection">
+  <input data-city='{{city}}' data-longitude='{{longitude}}'
+  data-latitude='{{latitude}}' bindinput='bindInput'
+  placeholder='搜索'></input>
+</view>
+<view bindtouchstart='bindSearch' data-keywords='{{i.name}}' wx:for='{{tips}}' wx:for-item="i" class='text_box'>
+{{i.name}}</view>
+<view class="map_container">
+  <map id='map' class='map' longitude='{{longitude}}'
+  latitude='{{latitude}}' scale='14' show-location='true'
+  markers='{{markers}}'
+  bindmarkertap='markertap'></map>
+</view>
+<view class="map_text">
+  <text class='h1'>{{textData.name}}</text>
+  <text>{{textData.desc}}</text>
+</view>

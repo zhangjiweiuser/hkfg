@@ -4,6 +4,11 @@
 <view class="containermap">
   <view class="naviButton" id="staticmap" bindtouchstart='naviTostaticmap'>静态地图</view>
 </view>
+<view class="containermap">
+  <view class="naviButton" id="aliweather" bindtouchstart='naviToaliweather'>天气查询</view>
+</view>
+<view class="naviButton" id="poi" bindtouchstart="naviToPoi">周边兴趣点查询</view>
+  <view class="naviButton" id="navi" bindtouchstart="naviToNavi">出行路线规划</view>
 <button bindtap='getLocationm'>获取经纬度</button>
 <view class="section">
   <view class="section__title">省市区选择器</view>

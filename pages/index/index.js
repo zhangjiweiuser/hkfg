@@ -102,6 +102,21 @@ Page({
       url: '../staticmap/staticmap',
     })
   },
+  naviToaliweather(e){
+    wx.navigateTo({
+      url: '../aliweather/aliweather',
+    })
+  },
+  naviToNavi(e){
+    wx.navigateTo({
+      url: '../navigation_car/navigation',
+    })
+  },
+  naviToPoi(e){
+    wx.navigateTo({
+      url: '../poi/poi',
+    })
+  },
   bindRegionChange: function (e) {
     console.log('picker发送选择改变，携带值为', e.detail.value)
     this.setData({

@@ -1,0 +1,45 @@
+/* pages/poi/poi.wxss */
+.selection{
+  height: 30px;
+  width: 100%;
+}
+.selection input{
+  width: 90%;
+  margin: 5px auto;
+  border: 1px solid #000000;
+  height: 30px;
+  border-radius: 3px;
+  padding: 0 5px;
+}
+.map_container{
+  position: absolute;
+  top: 42px;
+  bottom: 80px;
+  left: 0;
+  right: 0;
+}
+.map{
+  width: 100%;
+  height: 100%;
+}
+.map_text{
+  position: absolute;
+  bottom: 0;
+  height: 80px;
+  left: 0;
+  right: 0;
+  background: #fff;
+  padding: 0 15px;
+}
+text{
+  margin: 5px 0;
+  display: block;
+  font-size: 12px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.h1{
+  margin: 15px 0;
+  font-size: 15px;
+}

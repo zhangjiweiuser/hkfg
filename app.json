@@ -8,7 +8,18 @@
     "pages/redirect/redirect",
     "pages/navigator/navigator",
     "pages/regeo/regeo",
-    "pages/staticmap/staticmap"
+    "pages/staticmap/staticmap",
+    "pages/aliweather/aliweather",
+    "pages/poi/poi",
+    "pages/inputtips/inputtips",
+    "pages/navigation_car/navigation",
+    "pages/navigation_car_detail/navigation_car_detail",
+    "pages/navigation_walk/navigation_walk",
+    "pages/navigation_walk_detail/navigation_walk_detail",
+    "pages/navigation_bus/navigation_bus",
+    "pages/navigation_ride/navigation_ride",
+    "pages/navigation_ride_detail/navigation_ride_detail"
+    
   ],
   "window":{
     "backgroundTextStyle":"light",
